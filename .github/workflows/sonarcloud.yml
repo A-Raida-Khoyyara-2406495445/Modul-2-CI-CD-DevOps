@@ -1,0 +1,32 @@
+# Add SonarCloud
+
+name: SonarCloud Analysis
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          cache: gradle
+          distribution: temurin
+          java-version: 21
+
+      - name: Execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build and Analyze with Gradle
+        run: ./gradlew clean build sonar
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
