@@ -27,6 +27,7 @@ public class ProductServiceImplTests {
 
     @BeforeEach
     void setUp() {
+      // No setup required for this test class
     }
 
     @Test
