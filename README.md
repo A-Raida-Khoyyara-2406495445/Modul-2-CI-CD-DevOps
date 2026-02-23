@@ -44,7 +44,6 @@ Menurut saya, implementasi saat ini telah memenuhi definisi Continuous Integrati
 Dari sisi Continuous Integration, setiap perubahan kode yang di-push ke repository secara otomatis memicu GitHub Actions untuk menjalankan unit test dan analisis kualitas kode. Hal ini memastikan bahwa perubahan baru tidak merusak fitur yang sudah ada dan tetap menjaga standar kualitas kode.
 Dari sisi Continuous Deployment, setelah seluruh tahapan CI berhasil dilewati, aplikasi secara otomatis di-deploy ke platform PaaS (Koyeb) tanpa intervensi manual. Dengan demikian, setiap perubahan yang valid dapat langsung tersedia di lingkungan produksi secara cepat dan konsisten.
 
-
-## Kesimpulan
+### Kesimpulan
 Dari modul 2 ini, saya tidak hanya memperbaiki kualitas kode dan memastikan konsistensi standar pengembangan, tetapi juga mendapat pengalaman dalam mengelola pipeline CI/CD dan mengintegrasikan GitHub Actions dan SonarCloud.
 Implementasi ini menunjukkan bahwa otomatisasi pengujian, analisis kualitas, dan deployment dapat meningkatkan reliability serta efisiensi dalam pengembangan perangkat lunak.
