@@ -9,10 +9,14 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("car")
+@RequestMapping("/car")
 public class CarController {
+  private final CarService carService;
+
   @Autowired
-  private CarService carService;
+  public CarController(CarService carService) {
+    this.carService = carService;
+  }
 
   @GetMapping("/createCar")
   public String createCarPage(Model model){
