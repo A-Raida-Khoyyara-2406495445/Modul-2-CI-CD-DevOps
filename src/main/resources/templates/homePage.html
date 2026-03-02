@@ -13,8 +13,16 @@
         <h1>Welcome to ADV Shop</h1>
         <p class="text-muted">e-commerce Advance Programming</p>
         <hr>
-        <p>Manage your products here:</p>
-        <a th:href="@{/product/list}" class="btn btn-primary">See Product List</a>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Manage your products here:</p>
+                <a th:href="@{/product/list}" class="btn btn-primary">See Product List</a>
+            </div>
+            <div class="col-md-6">
+                <p>Manage your cars here:</p>
+                <a th:href="@{/car/listCar}" class="btn btn-success">See Car List</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
