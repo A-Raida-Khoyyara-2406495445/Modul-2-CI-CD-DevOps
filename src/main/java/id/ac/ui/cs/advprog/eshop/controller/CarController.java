@@ -38,10 +38,10 @@ public class CarController {
     return "carList";
   }
 
-  @GetMapping("/editCar")
-  public  String editCarPage(@PathVariable String carId, Model model){
+  @GetMapping("/editCar/{carId}")
+  public String editCarPage(@PathVariable String carId, Model model) {
     Car car = carService.findById(carId);
-    model.addAttribute("car",car);
+    model.addAttribute("car", car);
     return "editCar";
   }
 
