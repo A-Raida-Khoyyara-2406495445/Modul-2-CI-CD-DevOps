@@ -12,38 +12,40 @@ import java.util.UUID;
 
 @Service
 public class ProductServiceImpl implements ProductService{
+  private final ProductRepository productRepository;
 
-    @Autowired
-    private ProductRepository productRepository;
+  @Autowired
+  public  ProductServiceImpl(ProductRepository productRepository){
+    this.productRepository = productRepository;
+  }
 
-    @Override
-    public Product create(Product product){
-        product.setProductId(UUID.randomUUID().toString());
-        productRepository.create(product);
-        return product;
-    }
+  @Override
+  public Product create(Product product){
+      productRepository.create(product);
+      return product;
+  }
 
-    @Override
-    public List<Product> findAll(){
-        Iterator<Product> productIterator = productRepository.findAll();
-        List<Product> allProduct = new ArrayList<>();
-        productIterator.forEachRemaining(allProduct::add);
-        return allProduct;
-    }
+  @Override
+  public List<Product> findAll(){
+      Iterator<Product> productIterator = productRepository.findAll();
+      List<Product> allProduct = new ArrayList<>();
+      productIterator.forEachRemaining(allProduct::add);
+      return allProduct;
+  }
 
-    @Override
-    public Product findById(String id){
-        return productRepository.findById(id);
-    }
+  @Override
+  public Product findById(String id){
+      return productRepository.findById(id);
+  }
 
-    @Override
-    public void update(Product product){
-        productRepository.update(product);
-    }
+  @Override
+  public void update(Product product){
+      productRepository.update(product);
+  }
 
-    @Override
-    public void deleteById(String id){
-        productRepository.deleteById(id);
-    }
+  @Override
+  public void deleteById(String id){
+      productRepository.deleteById(id);
+  }
 
 }
