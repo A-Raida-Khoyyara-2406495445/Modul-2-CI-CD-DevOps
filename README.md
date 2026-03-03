@@ -1,3 +1,14 @@
+```
+Nama : Raida Khoyyara
+NPM : 2406495445 
+Kelas : Pemrograman Lanjut-A
+```
+# Notes
+SonarCloud main branch dikonfigurasi pada branch `ci-cd` (bukan `main`)
+karena keterbatasan SonarCloud Free Plan yang tidak memperbolehkan
+pergantian main branch. Quality Gate analysis dapat dilihat di branch `ci-cd`
+pada SonarCloud dashboard.
+
 <details>
 <summary>Tutorial 1: Coding Standards</summary>
 
